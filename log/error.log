@@ -123,3 +123,173 @@
 [Thu Nov 17 18:29:08.099670 2016] [core:error] [pid 25780:tid 140038465640192] [client 183.129.160.229:53499] AH00135: Invalid method in request test
 [Sun Nov 20 11:49:23.635810 2016] [core:error] [pid 25781:tid 140038457247488] [client 183.129.160.229:57062] AH00135: Invalid method in request test
 [Wed Nov 23 00:52:42.825183 2016] [core:error] [pid 28171:tid 140038390105856] [client 183.129.160.229:57666] AH00135: Invalid method in request test
+[Thu Dec 08 11:05:31.700414 2016] [:error] [pid 5649:tid 140289662478080] [client 106.210.93.137:53777] mod_wsgi (pid=5649): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module., referer: http://127.0.0.1:8080/
+[Thu Dec 08 11:05:31.700461 2016] [:error] [pid 5649:tid 140289662478080] [client 106.210.93.137:53777] mod_wsgi (pid=5649): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'., referer: http://127.0.0.1:8080/
+[Thu Dec 08 11:05:31.700488 2016] [:error] [pid 5649:tid 140289662478080] [client 106.210.93.137:53777] Traceback (most recent call last):, referer: http://127.0.0.1:8080/
+[Thu Dec 08 11:05:31.700511 2016] [:error] [pid 5649:tid 140289662478080] [client 106.210.93.137:53777]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>, referer: http://127.0.0.1:8080/
+[Thu Dec 08 11:05:31.700568 2016] [:error] [pid 5649:tid 140289662478080] [client 106.210.93.137:53777]     from app import app as application, referer: http://127.0.0.1:8080/
+[Thu Dec 08 11:05:31.700579 2016] [:error] [pid 5649:tid 140289662478080] [client 106.210.93.137:53777]   File "/var/www/api/app.py", line 7, in <module>, referer: http://127.0.0.1:8080/
+[Thu Dec 08 11:05:31.700612 2016] [:error] [pid 5649:tid 140289662478080] [client 106.210.93.137:53777]     from projects import *, referer: http://127.0.0.1:8080/
+[Thu Dec 08 11:05:31.700622 2016] [:error] [pid 5649:tid 140289662478080] [client 106.210.93.137:53777]   File "/var/www/api/projects/__init__.py", line 1, in <module>, referer: http://127.0.0.1:8080/
+[Thu Dec 08 11:05:31.700645 2016] [:error] [pid 5649:tid 140289662478080] [client 106.210.93.137:53777]     from search import *, referer: http://127.0.0.1:8080/
+[Thu Dec 08 11:05:31.700663 2016] [:error] [pid 5649:tid 140289662478080] [client 106.210.93.137:53777] ImportError: No module named search, referer: http://127.0.0.1:8080/
+[Thu Dec 08 12:04:18.838946 2016] [:error] [pid 5649:tid 140289654085376] [client 49.249.42.13:23064] mod_wsgi (pid=5649): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:04:18.839033 2016] [:error] [pid 5649:tid 140289654085376] [client 49.249.42.13:23064] mod_wsgi (pid=5649): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:04:18.839069 2016] [:error] [pid 5649:tid 140289654085376] [client 49.249.42.13:23064] Traceback (most recent call last):
+[Thu Dec 08 12:04:18.839109 2016] [:error] [pid 5649:tid 140289654085376] [client 49.249.42.13:23064]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:04:18.839160 2016] [:error] [pid 5649:tid 140289654085376] [client 49.249.42.13:23064]     from app import app as application
+[Thu Dec 08 12:04:18.839176 2016] [:error] [pid 5649:tid 140289654085376] [client 49.249.42.13:23064]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:04:18.839198 2016] [:error] [pid 5649:tid 140289654085376] [client 49.249.42.13:23064]     from projects import *
+[Thu Dec 08 12:04:18.839209 2016] [:error] [pid 5649:tid 140289654085376] [client 49.249.42.13:23064]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:04:18.839226 2016] [:error] [pid 5649:tid 140289654085376] [client 49.249.42.13:23064]     from search import *
+[Thu Dec 08 12:04:18.839283 2016] [:error] [pid 5649:tid 140289654085376] [client 49.249.42.13:23064] ImportError: No module named search
+[Thu Dec 08 12:05:37.107243 2016] [:error] [pid 5649:tid 140289645692672] [client 106.51.29.19:23173] mod_wsgi (pid=5649): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:05:37.107351 2016] [:error] [pid 5649:tid 140289645692672] [client 106.51.29.19:23173] mod_wsgi (pid=5649): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:05:37.107395 2016] [:error] [pid 5649:tid 140289645692672] [client 106.51.29.19:23173] Traceback (most recent call last):
+[Thu Dec 08 12:05:37.107436 2016] [:error] [pid 5649:tid 140289645692672] [client 106.51.29.19:23173]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:05:37.107492 2016] [:error] [pid 5649:tid 140289645692672] [client 106.51.29.19:23173]     from app import app as application
+[Thu Dec 08 12:05:37.107508 2016] [:error] [pid 5649:tid 140289645692672] [client 106.51.29.19:23173]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:05:37.107530 2016] [:error] [pid 5649:tid 140289645692672] [client 106.51.29.19:23173]     from projects import *
+[Thu Dec 08 12:05:37.107540 2016] [:error] [pid 5649:tid 140289645692672] [client 106.51.29.19:23173]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:05:37.107555 2016] [:error] [pid 5649:tid 140289645692672] [client 106.51.29.19:23173]     from search import *
+[Thu Dec 08 12:05:37.107585 2016] [:error] [pid 5649:tid 140289645692672] [client 106.51.29.19:23173] ImportError: No module named search
+[Thu Dec 08 12:07:13.695445 2016] [:error] [pid 5648:tid 140289612121856] [client 106.51.29.19:23200] mod_wsgi (pid=5648): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:07:13.695515 2016] [:error] [pid 5648:tid 140289612121856] [client 106.51.29.19:23200] mod_wsgi (pid=5648): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:07:13.695543 2016] [:error] [pid 5648:tid 140289612121856] [client 106.51.29.19:23200] Traceback (most recent call last):
+[Thu Dec 08 12:07:13.695572 2016] [:error] [pid 5648:tid 140289612121856] [client 106.51.29.19:23200]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:07:13.695636 2016] [:error] [pid 5648:tid 140289612121856] [client 106.51.29.19:23200]     from app import app as application
+[Thu Dec 08 12:07:13.695647 2016] [:error] [pid 5648:tid 140289612121856] [client 106.51.29.19:23200]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:07:13.695680 2016] [:error] [pid 5648:tid 140289612121856] [client 106.51.29.19:23200]     from projects import *
+[Thu Dec 08 12:07:13.695690 2016] [:error] [pid 5648:tid 140289612121856] [client 106.51.29.19:23200]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:07:13.695711 2016] [:error] [pid 5648:tid 140289612121856] [client 106.51.29.19:23200]     from search import *
+[Thu Dec 08 12:07:13.695731 2016] [:error] [pid 5648:tid 140289612121856] [client 106.51.29.19:23200] ImportError: No module named search
+[Thu Dec 08 12:07:39.422004 2016] [:error] [pid 5649:tid 140289637299968] [client 49.249.42.13:23155] mod_wsgi (pid=5649): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:07:39.422081 2016] [:error] [pid 5649:tid 140289637299968] [client 49.249.42.13:23155] mod_wsgi (pid=5649): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:07:39.422117 2016] [:error] [pid 5649:tid 140289637299968] [client 49.249.42.13:23155] Traceback (most recent call last):
+[Thu Dec 08 12:07:39.422157 2016] [:error] [pid 5649:tid 140289637299968] [client 49.249.42.13:23155]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:07:39.422209 2016] [:error] [pid 5649:tid 140289637299968] [client 49.249.42.13:23155]     from app import app as application
+[Thu Dec 08 12:07:39.422245 2016] [:error] [pid 5649:tid 140289637299968] [client 49.249.42.13:23155]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:07:39.422269 2016] [:error] [pid 5649:tid 140289637299968] [client 49.249.42.13:23155]     from projects import *
+[Thu Dec 08 12:07:39.422293 2016] [:error] [pid 5649:tid 140289637299968] [client 49.249.42.13:23155]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:07:39.422312 2016] [:error] [pid 5649:tid 140289637299968] [client 49.249.42.13:23155]     from search import *
+[Thu Dec 08 12:07:39.422345 2016] [:error] [pid 5649:tid 140289637299968] [client 49.249.42.13:23155] ImportError: No module named search
+[Thu Dec 08 12:09:23.443283 2016] [:error] [pid 5648:tid 140289578551040] [client 106.51.29.19:23251] mod_wsgi (pid=5648): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:09:23.443424 2016] [:error] [pid 5648:tid 140289578551040] [client 106.51.29.19:23251] mod_wsgi (pid=5648): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:09:23.443458 2016] [:error] [pid 5648:tid 140289578551040] [client 106.51.29.19:23251] Traceback (most recent call last):
+[Thu Dec 08 12:09:23.443491 2016] [:error] [pid 5648:tid 140289578551040] [client 106.51.29.19:23251]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:09:23.443536 2016] [:error] [pid 5648:tid 140289578551040] [client 106.51.29.19:23251]     from app import app as application
+[Thu Dec 08 12:09:23.443547 2016] [:error] [pid 5648:tid 140289578551040] [client 106.51.29.19:23251]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:09:23.443562 2016] [:error] [pid 5648:tid 140289578551040] [client 106.51.29.19:23251]     from projects import *
+[Thu Dec 08 12:09:23.443571 2016] [:error] [pid 5648:tid 140289578551040] [client 106.51.29.19:23251]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:09:23.443585 2016] [:error] [pid 5648:tid 140289578551040] [client 106.51.29.19:23251]     from search import *
+[Thu Dec 08 12:09:23.443611 2016] [:error] [pid 5648:tid 140289578551040] [client 106.51.29.19:23251] ImportError: No module named search
+[Thu Dec 08 12:14:49.045474 2016] [:error] [pid 5649:tid 140289628907264] [client 106.51.29.19:21574] mod_wsgi (pid=5649): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:14:49.045530 2016] [:error] [pid 5649:tid 140289628907264] [client 106.51.29.19:21574] mod_wsgi (pid=5649): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:14:49.045555 2016] [:error] [pid 5649:tid 140289628907264] [client 106.51.29.19:21574] Traceback (most recent call last):
+[Thu Dec 08 12:14:49.045581 2016] [:error] [pid 5649:tid 140289628907264] [client 106.51.29.19:21574]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:14:49.045618 2016] [:error] [pid 5649:tid 140289628907264] [client 106.51.29.19:21574]     from app import app as application
+[Thu Dec 08 12:14:49.045626 2016] [:error] [pid 5649:tid 140289628907264] [client 106.51.29.19:21574]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:14:49.045637 2016] [:error] [pid 5649:tid 140289628907264] [client 106.51.29.19:21574]     from projects import *
+[Thu Dec 08 12:14:49.045642 2016] [:error] [pid 5649:tid 140289628907264] [client 106.51.29.19:21574]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:14:49.045651 2016] [:error] [pid 5649:tid 140289628907264] [client 106.51.29.19:21574]     from search import *
+[Thu Dec 08 12:14:49.045673 2016] [:error] [pid 5649:tid 140289628907264] [client 106.51.29.19:21574] ImportError: No module named search
+[Thu Dec 08 12:17:12.072060 2016] [:error] [pid 5648:tid 140289738012416] [client 59.89.154.114:10203] mod_wsgi (pid=5648): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:17:12.072127 2016] [:error] [pid 5648:tid 140289738012416] [client 59.89.154.114:10203] mod_wsgi (pid=5648): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:17:12.072158 2016] [:error] [pid 5648:tid 140289738012416] [client 59.89.154.114:10203] Traceback (most recent call last):
+[Thu Dec 08 12:17:12.072188 2016] [:error] [pid 5648:tid 140289738012416] [client 59.89.154.114:10203]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:17:12.072234 2016] [:error] [pid 5648:tid 140289738012416] [client 59.89.154.114:10203]     from app import app as application
+[Thu Dec 08 12:17:12.072246 2016] [:error] [pid 5648:tid 140289738012416] [client 59.89.154.114:10203]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:17:12.072262 2016] [:error] [pid 5648:tid 140289738012416] [client 59.89.154.114:10203]     from projects import *
+[Thu Dec 08 12:17:12.072270 2016] [:error] [pid 5648:tid 140289738012416] [client 59.89.154.114:10203]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:17:12.072284 2016] [:error] [pid 5648:tid 140289738012416] [client 59.89.154.114:10203]     from search import *
+[Thu Dec 08 12:17:12.072309 2016] [:error] [pid 5648:tid 140289738012416] [client 59.89.154.114:10203] ImportError: No module named search
+[Thu Dec 08 12:18:17.664961 2016] [:error] [pid 5648:tid 140289704441600] [client 106.51.29.19:21865] mod_wsgi (pid=5648): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:18:17.665023 2016] [:error] [pid 5648:tid 140289704441600] [client 106.51.29.19:21865] mod_wsgi (pid=5648): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:18:17.665137 2016] [:error] [pid 5648:tid 140289704441600] [client 106.51.29.19:21865] Traceback (most recent call last):
+[Thu Dec 08 12:18:17.665189 2016] [:error] [pid 5648:tid 140289704441600] [client 106.51.29.19:21865]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:18:17.665411 2016] [:error] [pid 5648:tid 140289704441600] [client 106.51.29.19:21865]     from app import app as application
+[Thu Dec 08 12:18:17.665447 2016] [:error] [pid 5648:tid 140289704441600] [client 106.51.29.19:21865]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:18:17.665474 2016] [:error] [pid 5648:tid 140289704441600] [client 106.51.29.19:21865]     from projects import *
+[Thu Dec 08 12:18:17.665487 2016] [:error] [pid 5648:tid 140289704441600] [client 106.51.29.19:21865]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:18:17.665504 2016] [:error] [pid 5648:tid 140289704441600] [client 106.51.29.19:21865]     from search import *
+[Thu Dec 08 12:18:17.665535 2016] [:error] [pid 5648:tid 140289704441600] [client 106.51.29.19:21865] ImportError: No module named search
+[Thu Dec 08 12:19:48.038703 2016] [:error] [pid 5649:tid 140289612121856] [client 59.89.154.114:10220] mod_wsgi (pid=5649): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:19:48.038762 2016] [:error] [pid 5649:tid 140289612121856] [client 59.89.154.114:10220] mod_wsgi (pid=5649): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:19:48.038797 2016] [:error] [pid 5649:tid 140289612121856] [client 59.89.154.114:10220] Traceback (most recent call last):
+[Thu Dec 08 12:19:48.038832 2016] [:error] [pid 5649:tid 140289612121856] [client 59.89.154.114:10220]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:19:48.038884 2016] [:error] [pid 5649:tid 140289612121856] [client 59.89.154.114:10220]     from app import app as application
+[Thu Dec 08 12:19:48.038901 2016] [:error] [pid 5649:tid 140289612121856] [client 59.89.154.114:10220]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:19:48.038923 2016] [:error] [pid 5649:tid 140289612121856] [client 59.89.154.114:10220]     from projects import *
+[Thu Dec 08 12:19:48.038938 2016] [:error] [pid 5649:tid 140289612121856] [client 59.89.154.114:10220]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:19:48.038975 2016] [:error] [pid 5649:tid 140289612121856] [client 59.89.154.114:10220]     from search import *
+[Thu Dec 08 12:19:48.039010 2016] [:error] [pid 5649:tid 140289612121856] [client 59.89.154.114:10220] ImportError: No module named search
+[Thu Dec 08 12:20:10.151561 2016] [:error] [pid 5648:tid 140289595336448] [client 202.83.18.77:50466] mod_wsgi (pid=5648): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:20:10.151611 2016] [:error] [pid 5648:tid 140289595336448] [client 202.83.18.77:50466] mod_wsgi (pid=5648): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:20:10.151632 2016] [:error] [pid 5648:tid 140289595336448] [client 202.83.18.77:50466] Traceback (most recent call last):
+[Thu Dec 08 12:20:10.151658 2016] [:error] [pid 5648:tid 140289595336448] [client 202.83.18.77:50466]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:20:10.151728 2016] [:error] [pid 5648:tid 140289595336448] [client 202.83.18.77:50466]     from app import app as application
+[Thu Dec 08 12:20:10.151740 2016] [:error] [pid 5648:tid 140289595336448] [client 202.83.18.77:50466]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:20:10.151751 2016] [:error] [pid 5648:tid 140289595336448] [client 202.83.18.77:50466]     from projects import *
+[Thu Dec 08 12:20:10.151757 2016] [:error] [pid 5648:tid 140289595336448] [client 202.83.18.77:50466]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:20:10.151766 2016] [:error] [pid 5648:tid 140289595336448] [client 202.83.18.77:50466]     from search import *
+[Thu Dec 08 12:20:10.151787 2016] [:error] [pid 5648:tid 140289595336448] [client 202.83.18.77:50466] ImportError: No module named search
+[Thu Dec 08 12:22:41.217316 2016] [:error] [pid 5648:tid 140289729619712] [client 106.51.29.19:22534] mod_wsgi (pid=5648): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 12:22:41.217407 2016] [:error] [pid 5648:tid 140289729619712] [client 106.51.29.19:22534] mod_wsgi (pid=5648): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 12:22:41.217442 2016] [:error] [pid 5648:tid 140289729619712] [client 106.51.29.19:22534] Traceback (most recent call last):
+[Thu Dec 08 12:22:41.217533 2016] [:error] [pid 5648:tid 140289729619712] [client 106.51.29.19:22534]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 12:22:41.217587 2016] [:error] [pid 5648:tid 140289729619712] [client 106.51.29.19:22534]     from app import app as application
+[Thu Dec 08 12:22:41.217602 2016] [:error] [pid 5648:tid 140289729619712] [client 106.51.29.19:22534]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 12:22:41.217624 2016] [:error] [pid 5648:tid 140289729619712] [client 106.51.29.19:22534]     from projects import *
+[Thu Dec 08 12:22:41.217637 2016] [:error] [pid 5648:tid 140289729619712] [client 106.51.29.19:22534]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 12:22:41.217658 2016] [:error] [pid 5648:tid 140289729619712] [client 106.51.29.19:22534]     from search import *
+[Thu Dec 08 12:22:41.217691 2016] [:error] [pid 5648:tid 140289729619712] [client 106.51.29.19:22534] ImportError: No module named search
+[Thu Dec 08 13:09:01.267010 2016] [:error] [pid 5648:tid 140289712834304] [client 115.117.132.11:12285] mod_wsgi (pid=5648): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 13:09:01.267063 2016] [:error] [pid 5648:tid 140289712834304] [client 115.117.132.11:12285] mod_wsgi (pid=5648): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 13:09:01.267091 2016] [:error] [pid 5648:tid 140289712834304] [client 115.117.132.11:12285] Traceback (most recent call last):
+[Thu Dec 08 13:09:01.267120 2016] [:error] [pid 5648:tid 140289712834304] [client 115.117.132.11:12285]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 13:09:01.267176 2016] [:error] [pid 5648:tid 140289712834304] [client 115.117.132.11:12285]     from app import app as application
+[Thu Dec 08 13:09:01.267187 2016] [:error] [pid 5648:tid 140289712834304] [client 115.117.132.11:12285]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 13:09:01.267200 2016] [:error] [pid 5648:tid 140289712834304] [client 115.117.132.11:12285]     from projects import *
+[Thu Dec 08 13:09:01.267207 2016] [:error] [pid 5648:tid 140289712834304] [client 115.117.132.11:12285]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 13:09:01.267218 2016] [:error] [pid 5648:tid 140289712834304] [client 115.117.132.11:12285]     from search import *
+[Thu Dec 08 13:09:01.267241 2016] [:error] [pid 5648:tid 140289712834304] [client 115.117.132.11:12285] ImportError: No module named search
+[Thu Dec 08 13:11:12.589933 2016] [:error] [pid 5648:tid 140289696048896] [client 115.117.132.11:10030] mod_wsgi (pid=5648): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 13:11:12.590017 2016] [:error] [pid 5648:tid 140289696048896] [client 115.117.132.11:10030] mod_wsgi (pid=5648): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 13:11:12.590055 2016] [:error] [pid 5648:tid 140289696048896] [client 115.117.132.11:10030] Traceback (most recent call last):
+[Thu Dec 08 13:11:12.590091 2016] [:error] [pid 5648:tid 140289696048896] [client 115.117.132.11:10030]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 13:11:12.590138 2016] [:error] [pid 5648:tid 140289696048896] [client 115.117.132.11:10030]     from app import app as application
+[Thu Dec 08 13:11:12.590153 2016] [:error] [pid 5648:tid 140289696048896] [client 115.117.132.11:10030]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 13:11:12.590170 2016] [:error] [pid 5648:tid 140289696048896] [client 115.117.132.11:10030]     from projects import *
+[Thu Dec 08 13:11:12.590180 2016] [:error] [pid 5648:tid 140289696048896] [client 115.117.132.11:10030]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 13:11:12.590193 2016] [:error] [pid 5648:tid 140289696048896] [client 115.117.132.11:10030]     from search import *
+[Thu Dec 08 13:11:12.590221 2016] [:error] [pid 5648:tid 140289696048896] [client 115.117.132.11:10030] ImportError: No module named search
+[Thu Dec 08 13:11:25.885388 2016] [:error] [pid 5649:tid 140289595336448] [client 47.31.21.165:34279] mod_wsgi (pid=5649): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 13:11:25.885471 2016] [:error] [pid 5649:tid 140289595336448] [client 47.31.21.165:34279] mod_wsgi (pid=5649): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 13:11:25.885496 2016] [:error] [pid 5649:tid 140289595336448] [client 47.31.21.165:34279] Traceback (most recent call last):
+[Thu Dec 08 13:11:25.885535 2016] [:error] [pid 5649:tid 140289595336448] [client 47.31.21.165:34279]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 13:11:25.885581 2016] [:error] [pid 5649:tid 140289595336448] [client 47.31.21.165:34279]     from app import app as application
+[Thu Dec 08 13:11:25.885596 2016] [:error] [pid 5649:tid 140289595336448] [client 47.31.21.165:34279]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 13:11:25.885614 2016] [:error] [pid 5649:tid 140289595336448] [client 47.31.21.165:34279]     from projects import *
+[Thu Dec 08 13:11:25.885622 2016] [:error] [pid 5649:tid 140289595336448] [client 47.31.21.165:34279]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 13:11:25.885632 2016] [:error] [pid 5649:tid 140289595336448] [client 47.31.21.165:34279]     from search import *
+[Thu Dec 08 13:11:25.885653 2016] [:error] [pid 5649:tid 140289595336448] [client 47.31.21.165:34279] ImportError: No module named search
+[Thu Dec 08 13:15:24.385062 2016] [:error] [pid 5648:tid 140289687656192] [client 117.96.36.42:55907] mod_wsgi (pid=5648): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 13:15:24.385122 2016] [:error] [pid 5648:tid 140289687656192] [client 117.96.36.42:55907] mod_wsgi (pid=5648): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 13:15:24.385155 2016] [:error] [pid 5648:tid 140289687656192] [client 117.96.36.42:55907] Traceback (most recent call last):
+[Thu Dec 08 13:15:24.385188 2016] [:error] [pid 5648:tid 140289687656192] [client 117.96.36.42:55907]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 13:15:24.385240 2016] [:error] [pid 5648:tid 140289687656192] [client 117.96.36.42:55907]     from app import app as application
+[Thu Dec 08 13:15:24.385253 2016] [:error] [pid 5648:tid 140289687656192] [client 117.96.36.42:55907]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 13:15:24.385270 2016] [:error] [pid 5648:tid 140289687656192] [client 117.96.36.42:55907]     from projects import *
+[Thu Dec 08 13:15:24.385280 2016] [:error] [pid 5648:tid 140289687656192] [client 117.96.36.42:55907]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 13:15:24.385294 2016] [:error] [pid 5648:tid 140289687656192] [client 117.96.36.42:55907]     from search import *
+[Thu Dec 08 13:15:24.385320 2016] [:error] [pid 5648:tid 140289687656192] [client 117.96.36.42:55907] ImportError: No module named search
+[Thu Dec 08 13:29:27.080021 2016] [:error] [pid 5649:tid 140289586943744] [client 106.216.184.212:7482] mod_wsgi (pid=5649): Target WSGI script '/var/www/api/wsgi/flask.wsgi' cannot be loaded as Python module.
+[Thu Dec 08 13:29:27.080098 2016] [:error] [pid 5649:tid 140289586943744] [client 106.216.184.212:7482] mod_wsgi (pid=5649): Exception occurred processing WSGI script '/var/www/api/wsgi/flask.wsgi'.
+[Thu Dec 08 13:29:27.080199 2016] [:error] [pid 5649:tid 140289586943744] [client 106.216.184.212:7482] Traceback (most recent call last):
+[Thu Dec 08 13:29:27.080245 2016] [:error] [pid 5649:tid 140289586943744] [client 106.216.184.212:7482]   File "/var/www/api/wsgi/flask.wsgi", line 7, in <module>
+[Thu Dec 08 13:29:27.080296 2016] [:error] [pid 5649:tid 140289586943744] [client 106.216.184.212:7482]     from app import app as application
+[Thu Dec 08 13:29:27.080309 2016] [:error] [pid 5649:tid 140289586943744] [client 106.216.184.212:7482]   File "/var/www/api/app.py", line 7, in <module>
+[Thu Dec 08 13:29:27.080328 2016] [:error] [pid 5649:tid 140289586943744] [client 106.216.184.212:7482]     from projects import *
+[Thu Dec 08 13:29:27.080338 2016] [:error] [pid 5649:tid 140289586943744] [client 106.216.184.212:7482]   File "/var/www/api/projects/__init__.py", line 1, in <module>
+[Thu Dec 08 13:29:27.080353 2016] [:error] [pid 5649:tid 140289586943744] [client 106.216.184.212:7482]     from search import *
+[Thu Dec 08 13:29:27.080401 2016] [:error] [pid 5649:tid 140289586943744] [client 106.216.184.212:7482] ImportError: No module named search
