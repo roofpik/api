@@ -1,0 +1,344 @@
+<ion-view view-title="Add Services">
+    <ion-content class="has-header">
+        <ion-scroll class="scrollmenu" delegate-handle="c-handle" direction="x" style="width: {{windowWidth}}+px; height: 50px">
+            <div class="cus-tab tab{{$index}}" ng-repeat="service in servicess" ng-class="$index===0?'active':''" ng-click="tabHasChanged($index)">
+                {{service.catName}}
+            </div>
+        </ion-scroll>
+        <div class="col">
+            <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                <ion-slide ng-repeat="service in servicess">
+                    <div class="box blue">
+                        <h1>a</h1>
+                        <ul ng-if="data.currSlide === $index">
+                            <li ng-repeat="foo in service.services">{{foo.serviceName}}</li>
+                        </ul>
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+        </div>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-assertive">
+        <div class="buttons">
+            <button ng-click="skip()" class="button button-clear">Skip</button>
+        </div>
+        <h1 class="title"></h1>
+        <button ng-click="goToAddImage()" class="button button-clear">Next</button>
+    </ion-footer-bar>
+</ion-view>
+
+
+refApp.controller('AddMenuCtrl', function($scope, $timeout, $state, $stateParams, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
+    $scope.servicess = {
+        "cat-01": {
+            "catId": "cat-01",
+            "catName": "Hair",
+            "services": {
+                "1001": {
+                    "serviceName": "Beard Styling",
+                    "serviceId": "1001"
+                },
+                "1002": {
+                    "serviceName": "Blow Dry",
+                    "serviceId": "1002"
+                },
+                "1003": {
+                    "serviceName": "Hair Coloring",
+                    "serviceId": "1003"
+                },
+                "1004": {
+                    "serviceName": "Hair Consulting",
+                    "serviceId": "1004"
+                },
+                "1005": {
+                    "serviceName": "Hair Cut & Styling",
+                    "serviceId": "1005"
+                },
+                "1006": {
+                    "serviceName": "Hair Extension",
+                    "serviceId": "1006"
+                },
+                "1007": {
+                    "serviceName": "Head Massage",
+                    "serviceId": "1007"
+                },
+                "1008": {
+                    "serviceName": "Hair Spa",
+                    "serviceId": "1008"
+                },
+                "1009": {
+                    "serviceName": "Hair Transplant",
+                    "serviceId": "1009"
+                },
+                "1010": {
+                    "serviceName": "Hair Wash",
+                    "serviceId": "1010"
+                },
+                "1011": {
+                    "serviceName": "Other Hair Treatments",
+                    "serviceId": "1011"
+                },
+                "1012": {
+                    "serviceName": "Straightening/Perming",
+                    "serviceId": "1012"
+                },
+                "1013": {
+                    "serviceName": "Anti HairFall Treatment",
+                    "serviceId": "1013"
+                }
+            }
+        },
+        "cat-02": {
+            "catId": "cat-02",
+            "catName": "Face",
+            "services": {
+                "2001": {
+                    "serviceName": "Face Bleach",
+                    "serviceId": "2001"
+                },
+                "2002": {
+                    "serviceName": "Eyebrow/Eyelash",
+                    "serviceId": "2002"
+                },
+                "2003": {
+                    "serviceName": "Face Threading",
+                    "serviceId": "2003"
+                },
+                "2004": {
+                    "serviceName": "Face Waxing",
+                    "serviceId": "2004"
+                },
+                "2005": {
+                    "serviceName": "Facials",
+                    "serviceId": "2005"
+                },
+                "2006": {
+                    "serviceName": "Clean-up",
+                    "serviceId": "2006"
+                },
+                "2007": {
+                    "serviceName": "Laser Treatment",
+                    "serviceId": "2007"
+                },
+                "2008": {
+                    "serviceName": "Shaving",
+                    "serviceId": "2008"
+                },
+                "2009": {
+                    "serviceName": "Skin Treatments",
+                    "serviceId": "2009"
+                },
+                "2010": {
+                    "serviceName": "Skincare Consultations",
+                    "serviceId": "2010"
+                }
+            }
+        },
+        "cat-03": {
+            "catId": "cat-03",
+            "catName": "Hair Removal",
+            "services": {
+                "3001": {
+                    "serviceName": "Underarms",
+                    "serviceId": "3001"
+                },
+                "3002": {
+                    "serviceName": "Arms",
+                    "serviceId": "3002"
+                },
+                "3003": {
+                    "serviceName": "Legs",
+                    "serviceId": "3003"
+                },
+                "3004": {
+                    "serviceName": "Full Body",
+                    "serviceId": "3004"
+                },
+                "3005": {
+                    "serviceName": "Full Back",
+                    "serviceId": "3005"
+                },
+                "3006": {
+                    "serviceName": "Midriff",
+                    "serviceId": "3006"
+                },
+                "3007": {
+                    "serviceName": "Bikini",
+                    "serviceId": "3007"
+                },
+                "3008": {
+                    "serviceName": "Side Locks",
+                    "serviceId": "3008"
+                },
+                "3009": {
+                    "serviceName": "Laser Hair Removal",
+                    "serviceId": "3009"
+                }
+            }
+        },
+        "cat-04": {
+            "catId": "cat-04",
+            "catName": "Body",
+            "services": {
+                "4001": {
+                    "serviceName": "Body Polishing",
+                    "serviceId": "4001"
+                },
+                "4002": {
+                    "serviceName": "Body Toning",
+                    "serviceId": "4002"
+                },
+                "4003": {
+                    "serviceName": "Body Bleach",
+                    "serviceId": "4003"
+                },
+                "4004": {
+                    "serviceName": "Body Scrub",
+                    "serviceId": "4004"
+                },
+                "4005": {
+                    "serviceName": "Boby Wrap",
+                    "serviceId": "4005"
+                },
+                "4006": {
+                    "serviceName": "Body Treatments",
+                    "serviceId": "4006"
+                },
+                "4007": {
+                    "serviceName": "Botox Treatment",
+                    "serviceId": "4007"
+                },
+                "4008": {
+                    "serviceName": "Body Shaping and Contouring",
+                    "serviceId": "4008"
+                },
+                "4009": {
+                    "serviceName": "Tanning",
+                    "serviceId": "4009"
+                }
+            }
+        },
+        "cat-05": {
+            "catId": "cat-05",
+            "catName": "Hands and Feet",
+            "services": {
+                "5001": {
+                    "serviceName": "Pedicure",
+                    "serviceId": "5001"
+                },
+                "5002": {
+                    "serviceName": "Manicure",
+                    "serviceId": "5002"
+                },
+                "5003": {
+                    "serviceName": "Cleanings",
+                    "serviceId": "5003"
+                }
+            }
+        },
+        "cat-06": {
+            "catId": "cat-06",
+            "catName": "Nails",
+            "services": {
+                "6001": {
+                    "serviceName": "Nail Art",
+                    "serviceId": "6001"
+                },
+                "6002": {
+                    "serviceName": "Nail Extension/ Bar",
+                    "serviceId": "6002"
+                }
+            }
+        },
+        "cat-07": {
+            "catId": "cat-07",
+            "catName": "Packages",
+            "services": {
+                "7001": {
+                    "serviceName": "Packages",
+                    "serviceId": "7001"
+                }
+            }
+        },
+        "cat-08": {
+            "catId": "cat-08",
+            "catName": "Spa & Massages",
+            "services": {
+                "8001": {
+                    "serviceName": "Spa & Massages",
+                    "serviceId": "8001"
+                }
+            }
+        },
+        "cat-09": {
+            "catId": "cat-09",
+            "catName": "Fitness",
+            "services": {
+                "9001": {
+                    "serviceName": "Fitness",
+                    "serviceId": "9001"
+                }
+            }
+        },
+        "cat-11": {
+            "catId": "cat-11",
+            "catName": "Wedding & Party",
+            "services": {
+                "1101": {
+                    "serviceName": "Wedding & Party",
+                    "serviceId": "1101"
+                }
+            }
+        },
+        "cat-12": {
+            "catId": "cat-12",
+            "catName": "Tattoo",
+            "services": {
+                "1201": {
+                    "serviceName": "Tattoo",
+                    "serviceId": "1201"
+                }
+            }
+        }
+    }
+    $scope.windowWidth = $(window).width();
+    $scope.data = {};
+    $scope.data.currSlide = 0;
+
+    function scrollTabsToMiddle(x) {
+        $ionicScrollDelegate.$getByHandle('c-handle').scrollTo($ionicScrollDelegate.$getByHandle('c-handle').getScrollPosition().left + x, 0, true);
+        $ionicScrollDelegate.$getByHandle('c-handle').resize();
+    }
+
+    $scope.tabHasChanged = function(index) {
+        var windowWidth = $(window).width();
+        var halfWindowWidth = windowWidth / 2;
+        var currTab = $(".tab" + index);
+        $(".cus-tab").removeClass('active');
+        currTab.addClass('active');
+        $ionicSlideBoxDelegate.slide(index);
+
+        var currTabWidth = currTab.width();
+        var halfCurrTabWidth = currTabWidth / 2;
+        var currTabOffset = currTab.offset();
+        var centerX = currTabOffset.left - halfWindowWidth;
+
+        scrollTabsToMiddle(centerX + halfCurrTabWidth);
+    }
+
+    $scope.slideHasChanged = function(index) {
+        $scope.data.currSlide = index;
+        $scope.tabHasChanged(index);
+    }
+
+    $scope.goToAddImage = function() {
+        $state.go('create-vendor.add-images');
+    }
+
+    $scope.skip = function() {
+        $state.go('create-vendor.add-images');
+    }
+
+
+
+});
