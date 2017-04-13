@@ -6,6 +6,7 @@ from test import *
 from elastic import *
 from email_s import *
 from sms import *
+from other import *
 
 app = Flask(__name__)
 api = Api(app)
