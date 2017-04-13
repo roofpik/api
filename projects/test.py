@@ -1,7 +1,9 @@
 from flask import request
 from restful import Resource
 from flask_restful import reqparse
+import requests
 
-class testapi(Resource):
-    def post(self):
-        return 'abc'
+class test(Resource):
+	def post(self):
+		try:
+			return "arpit"
