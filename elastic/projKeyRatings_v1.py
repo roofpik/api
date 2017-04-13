@@ -14,7 +14,7 @@ def calc1(coun,nume):
                 return 'False'
 
 class projKeyRatings_v1(Resource):
-        def post(self):
+        def get(self):
                 try:
                         parser = reqparse.RequestParser()
                         parser.add_argument('pkey', type=str, help='project key')

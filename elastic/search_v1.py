@@ -10,7 +10,7 @@ esserver = 'https://search-roof-pnslfpvdk2valk5lfzveecww54.ap-south-1.es.amazona
 # locationKeyword.py is used to create the index in es (locationin_v1)
 # API is used to search a lcation by it's name
 class searchLocation_v1(Resource):
-	def post(self):
+	def get(self):
 		try:
 			parser = reqparse.RequestParser()
 			parser.add_argument('val', type=str, help='search string')
@@ -59,7 +59,7 @@ class searchLocation_v1(Resource):
 # projectKeyword.py is used to create the index in es (gensearchin_v1)
 # API is used to search a project by it's name
 class mainSearch_v1(Resource):
-	def post(self):
+	def get(self):
 		try:
 			parser = reqparse.RequestParser()
 			parser.add_argument('val', type=str, help='search string')
@@ -109,7 +109,7 @@ class mainSearch_v1(Resource):
 # projectKeyword.py is used to create the index in es (gensearchin_v1)
 # API is used to search a project by it's name and location
 class mainSearchByLoc_v1(Resource):
-	def post(self):
+	def get(self):
 		try:
 			parser = reqparse.RequestParser()
 			parser.add_argument('val', type=str, help='search string')
@@ -170,7 +170,7 @@ class mainSearchByLoc_v1(Resource):
 #projLocIn.py is used to create the index in es (projlocin_v1)
 # API is used in write reviews which searches both projects and locality by name
 class projLocSearch_v1(Resource):
-	def post(self):
+	def get(self):
 		try:
 			parser = reqparse.RequestParser()
 			parser.add_argument('val', type=str, help='search string')

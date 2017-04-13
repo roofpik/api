@@ -7,7 +7,7 @@ import json
 from copy import deepcopy
 
 class projectFilter_v1(Resource):
-	def post(self):
+	def get(self):
 		try:
 
 			parser = reqparse.RequestParser()
