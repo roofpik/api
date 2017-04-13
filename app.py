@@ -6,9 +6,8 @@ from flask.ext.cors import CORS
 from projects import *
 app = Flask(__name__)
 
-mysql.init_app(app)
 api = Api(app)
-CORS(app)
+CORS(app)s
 
 #Welcome Email
 api.add_resource(test, '/test')
