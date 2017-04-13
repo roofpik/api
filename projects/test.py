@@ -5,5 +5,4 @@ import requests
 
 class test(Resource):
 	def post(self):
-		try:
-			return "arpit"
+		return "arpit"
