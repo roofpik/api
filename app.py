@@ -30,6 +30,9 @@ api.add_resource(emailWelcome_v1,'/v1/emailWelcome')
 api.add_resource(emailReview_v1,'/v1/emailReview')
 
 
+api.add_resource(shorturl_v1,'/v1/shorturl')
+
+
 if __name__ == "__main__":
 	app.debug = True
 	app.run()

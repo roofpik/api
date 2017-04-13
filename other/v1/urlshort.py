@@ -4,7 +4,7 @@ from flask_restful import reqparse
 import requests
 import json
 
-class emailWelcome_v1(Resource):
+class shorturl_v1(Resource):
 	def post(self):
 		try:
 			url = "https://www.googleapis.com/urlshortener/v1/url"
