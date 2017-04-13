@@ -1,0 +1,1 @@
+from urlshort import *

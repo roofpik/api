@@ -1,3 +1,4 @@
+# API to get the summary of reviews of a particular project
 from flask import request
 from restful import Resource
 from flask_restful import reqparse
@@ -87,7 +88,7 @@ class projKeyRatings_v1(Resource):
                         avg_star=calc1(num,calc)
                         res=[]
                         res.append({
-                                        'key':pkey ,
+                                        'key':pkey,
                                         'ratings':
                                                 {
                                                         "security_rating": secur,
@@ -108,9 +109,9 @@ class projKeyRatings_v1(Resource):
                                                         "2_star":countarr[1],
                                                         "3_star":countarr[2],
                                                         "4_star":countarr[3],
-                                                        "5_star":countarr[4],
-                                                        "avg_star":avg_star
-                                                }
+                                                        "5_star":countarr[4]
+                                                },
+                                        "avg_star":avg_star
                                   })
                         return {'status':'200', 'items': res}
                 except Exception as e:

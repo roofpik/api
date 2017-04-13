@@ -1,3 +1,4 @@
+# These API's are used to search project or location based on various parameters mainly for home and write review search
 from flask import request
 from restful import Resource
 from flask_restful import reqparse
@@ -5,10 +6,10 @@ import requests
 import json
 
 
-esserver = 'https://search-roof-pnslfpvdk2valk5lfzveecww54.ap-south-1.es.amazonaws.com/'
-
 # locationKeyword.py is used to create the index in es (locationin_v1)
 # API is used to search a lcation by it's name
+esserver = 'https://search-roof-pnslfpvdk2valk5lfzveecww54.ap-south-1.es.amazonaws.com/'
+
 class searchLocation_v1(Resource):
 	def get(self):
 		try:

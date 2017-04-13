@@ -1,3 +1,4 @@
+# Get list of reviews of a project based on various filters
 from flask import request
 from restful import Resource
 from flask_restful import reqparse
@@ -32,7 +33,7 @@ class reviewSearch_v1(Resource):
 			query["size"] = 10
 
 
-			if ratings != "":
+			if ratings:
 				mrfilter = {}
 				mrfilter["bool"] = {}
 				mrfilter["bool"]["should"] = []
@@ -45,7 +46,7 @@ class reviewSearch_v1(Resource):
 				query["query"]["bool"]["must"].append(mrfilter)
 
 
-			if userType != "":
+			if userType:
 				utfilter = {}
 				utfilter["bool"] = {}
 				utfilter["bool"]["should"] = []
