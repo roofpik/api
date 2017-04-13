@@ -1,5 +1,4 @@
 from flask_restful import Resource as BaseResource
-from flask.ext.mysql import MySQL
 from functools import wraps
 
 
@@ -18,7 +17,4 @@ def exception(func):
 class Resource(BaseResource):
     method_decorators = [exception, ]
 
-    @property
-    def conn(self):
-        mysql = MySQL()
-        return mysql.get_db()
+
