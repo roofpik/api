@@ -111,7 +111,7 @@ def delUploadedImg():
         try:
             for s in size:
                 # print d['imgName']+'-'+s+'.jpg'
-                os.remove(d['imgName']+s+'.jpg')
+                os.remove(d['imgName']+'-'+s+'.jpg')
         except Exception as e:
             print e
 
