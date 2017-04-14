@@ -5,6 +5,7 @@ import requests
 import json
 from random import randint
 import urllib
+import urlshort
 
 
 def random_with_N_digits(n):
@@ -54,6 +55,30 @@ class writeReviewSms_v1(Resource):
 			'MobileNo' :_mobile,
 			'SenderID':'ROOFPK',
 			'Message':"Thank you for contributing Arpit! you are now eligible to avail exciting offers from our partners.",
+			'ServiceName': 'TEMPLATE_BASED'}
+			url = "http://smsapi.24x7sms.com/api_2.0/SendSMS.aspx"
+			f = urllib.urlencode(f)
+			response = requests.post(url, params= f)
+			return {'status':'200'}
+		except Exception as e:
+			return {'status':'400','Message':str(e)}
+
+
+class coupon_v1(Resource):
+	def post(self):
+		try:
+			parser = reqparse.RequestParser()
+			parser.add_argument('mobile', type=str, help='mobile number')
+			parser.add_argument('coupon', type=str, help='coupon code')
+
+			args = parser.parse_args()
+			_mobile = str(args['mobile'])
+			_coupon = str(args['coupon'])
+
+			f = { 'APIKEY' : 'rNfGwBJ7xcV',
+			'MobileNo' :_mobile,
+			'SenderID':'ROOFPK',
+			'Message':"Your coupon code is " + _coupon +". "+ urlshort.genurl(_coupon)
 			'ServiceName': 'TEMPLATE_BASED'}
 			url = "http://smsapi.24x7sms.com/api_2.0/SendSMS.aspx"
 			f = urllib.urlencode(f)

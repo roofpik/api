@@ -5,7 +5,7 @@ from flask.ext.cors import CORS
 from test import *
 from elastic import *
 from email_s import *
-from sms import *
+
 from other import *
 
 app = Flask(__name__)
@@ -31,7 +31,6 @@ api.add_resource(emailWelcome_v1,'/v1/emailWelcome')
 api.add_resource(emailReview_v1,'/v1/emailReview')
 
 
-api.add_resource(shorturl_v1,'/v1/shorturl')
 
 
 if __name__ == "__main__":
