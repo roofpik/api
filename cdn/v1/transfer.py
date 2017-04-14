@@ -36,11 +36,14 @@ def createPath(path):
 def imageSize(_imgType, _imgCat):
     if _imgType == 'nearby':
         return [['xs', 30, 45], ['s', 100, 150], ['m', 400, 600], ['l',800, 1200], ['xl', 1200, 1800]]
+    if _imgType == 'story':
+        return [['xs', 30, 45], ['s', 100, 150], ['m', 400, 600], ['l',800, 1200], ['xl', 1200, 1800]]
     if _imgType == 'residential':
       if _imgCat == 'thumbnail':
         return [['xs', 20, 24], ['s', 100, 120], ['m', 400, 480], ['l',800, 960], ['xl', 1200, 1440]]
       if _imgCat == 'cover':
         return [['xs', 25, 50], ['s', 100, 200], ['m', 400, 800], ['l',800, 1600], ['xl', 1200, 2400]]
+
       else:
         return [['xs', 30, 45], ['s', 100, 150], ['m', 400, 600], ['l',800, 1200], ['xl', 1200, 1800]]
 
