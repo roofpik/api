@@ -35,6 +35,9 @@ api.add_resource(emailReview_v1,'/v1/emailReview')
 api.add_resource(uploadImage_v1,'/v1/uploadImage')
 api.add_resource(deleteImage_v1,'/v1/deleteImage')
 
+api.add_resource(projectDetails_v1,'/v1/projectDetails')
+
+
 
 if __name__ == "__main__":
 	app.debug = True
