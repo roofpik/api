@@ -118,7 +118,8 @@ def delUploadedImg():
 
 
 
-delUploadedImg()
 
-# imageUpload()
+
+imageUpload()
+delUploadedImg()
 
