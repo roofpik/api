@@ -113,7 +113,7 @@ def delUploadedImg():
                 # print d['imgName']+'-'+s+'.jpg'
                 os.remove(d['imgName']+s+'.jpg')
         except Exception as e:
-            print "error: " + e + ' ' + key
+            print e
 
 
 
