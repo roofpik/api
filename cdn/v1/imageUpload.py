@@ -27,7 +27,7 @@ class uploadImage_v1(Resource):
                         imgstr = _img.split('base64,')[1]
                         imgdata = base64.b64decode(imgstr)
                         os.getcwd()
-                        os.chdir('/var/www/api/upload/images/')
+                        os.chdir('/var/www/api/cdn/v1/images/')
                         with open(_fileName, 'wb') as f:
                                 f.write(imgdata)
                                 f.close()
@@ -48,7 +48,7 @@ class deleteImage_v1(Resource):
         _imgName = args['imgName']
 
         os.getcwd()
-        os.chdir('/var/www/api/upload/images/')
+        os.chdir('/var/www/api/cdn/v1/images/')
         os.remove(_imgName)
 
         return {'status':'200'}
