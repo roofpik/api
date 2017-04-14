@@ -43,7 +43,6 @@ def imageSize(_imgType, _imgCat):
         return [['xs', 20, 24], ['s', 100, 120], ['m', 400, 480], ['l',800, 960], ['xl', 1200, 1440]]
       if _imgCat == 'cover':
         return [['xs', 25, 50], ['s', 100, 200], ['m', 400, 800], ['l',800, 1600], ['xl', 1200, 2400]]
-
       else:
         return [['xs', 30, 45], ['s', 100, 150], ['m', 400, 600], ['l',800, 1200], ['xl', 1200, 1800]]
 
@@ -69,32 +68,37 @@ def imageUpload():
     r = requests.request('get','https://roofpik-new.firebaseio.com/images/.json')
     data = r.json()
     os.getcwd()
+    err = {}
     os.chdir('images/')
     ftp = FTP('push-12.cdn77.com')
     ftp.login(user='user_o85l0jln', passwd='4J961952nvftlkGLVHGC')
     for key in data:
         d = data[key]
-        print 'step1'
-        if d['cdn'] == False:
-            print d
-            print 'step2', d['imgType'], d['imgCat']
-            pathStatus = createPath(d['path'])
-            print 'step3'
-            if pathStatus['status'] == '200':
-                print d['imgName']
-                ftp.cwd('/www/image/' + d['path'])
-                tempName = d['imgName'] + '.jpg'
-                orig_img = cv2.imread(tempName, 1)
-                (origHeight, origWidth) = orig_img.shape[:2]
-                dim = imageSize(d['imgType'], d['imgCat'])
-                for size in dim:
-                    (imgHeight, imgWidth) = setSize(origHeight, origWidth, size[1], size[2])
-                    img_resize = cv2.resize(orig_img, (imgWidth,imgHeight))
-                    resizeImgName = d['imgName'] + '-' + size[0] + '.jpg'
-                    cv2.imwrite(resizeImgName, img_resize)
-                    ftp.storbinary('STOR ' + resizeImgName, open(resizeImgName, 'rb'), 1024)
-                postData(key)
+        try:
+            print 'step1'
+            if d['cdn'] == False:
+                print d
+                print 'step2', d['imgType'], d['imgCat']
+                pathStatus = createPath(d['path'])
+                print 'step3'
+                if pathStatus['status'] == '200':
+                    print d['imgName']
+                    ftp.cwd('/www/image/' + d['path'])
+                    tempName = d['imgName'] + '.jpg'
+                    orig_img = cv2.imread(tempName, 1)
+                    (origHeight, origWidth) = orig_img.shape[:2]
+                    dim = imageSize(d['imgType'], d['imgCat'])
+                    for size in dim:
+                        (imgHeight, imgWidth) = setSize(origHeight, origWidth, size[1], size[2])
+                        img_resize = cv2.resize(orig_img, (imgWidth,imgHeight))
+                        resizeImgName = d['imgName'] + '-' + size[0] + '.jpg'
+                        cv2.imwrite(resizeImgName, img_resize)
+                        ftp.storbinary('STOR ' + resizeImgName, open(resizeImgName, 'rb'), 1024)
+                    postData(key)
+        except Exception as e:
+            err[key] = True
     ftp.quit()
+    print err
 
 imageUpload()
 
