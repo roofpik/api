@@ -110,7 +110,7 @@ def delUploadedImg():
         d = data[key]
         try:
             for s in size:
-            os.remove(d['imgName']+s+'.jpg')
+                os.remove(d['imgName']+s+'.jpg')
         except Exception as e:
             print "error: " + key
 
