@@ -78,7 +78,7 @@ class coupon_v1(Resource):
 			f = { 'APIKEY' : 'rNfGwBJ7xcV',
 			'MobileNo' :_mobile,
 			'SenderID':'ROOFPK',
-			'Message':"Your coupon code is " + _coupon +". "+ urlshort.genurl(_coupon)
+			'Message':"Your coupon code is " + _coupon +". "+ urlshort.genurl(_coupon),
 			'ServiceName': 'TEMPLATE_BASED'}
 			url = "http://smsapi.24x7sms.com/api_2.0/SendSMS.aspx"
 			f = urllib.urlencode(f)
