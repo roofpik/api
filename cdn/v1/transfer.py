@@ -105,12 +105,13 @@ def delUploadedImg():
     data = r.json()
     os.getcwd()
     size = ['xs','s','m','l','xl']
-    os.chdir('/var/www/api/cdn/v1/images/')
+    # os.chdir('/var/www/api/cdn/v1/images/')
     for key in data:
         d = data[key]
         try:
             for s in size:
-                os.remove(d['imgName']+s+'.jpg')
+                print d['imgName']+'-'+s+'.jpg'
+                # os.remove(d['imgName']+s+'.jpg')
         except Exception as e:
             print "error: " + key
 
