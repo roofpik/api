@@ -5,6 +5,7 @@ from flask.ext.cors import CORS
 from test import *
 from elastic import *
 from email_s import *
+from cdn import *
 
 from other import *
 
@@ -26,11 +27,11 @@ api.add_resource(reviewSearch_v1,'/v1/reviewSearch')
 api.add_resource(projectFilter_v1,'/v1/projectFilter')
 api.add_resource(projKeyRatings_v1,'/v1/projKeyRatings')
 
-
 api.add_resource(emailWelcome_v1,'/v1/emailWelcome')
 api.add_resource(emailReview_v1,'/v1/emailReview')
 
-
+api.add_resource(uploadImage_v1,'/v1/uploadImage')
+api.add_resource(deleteImage_v1,'/v1/deleteImage')
 
 
 if __name__ == "__main__":
