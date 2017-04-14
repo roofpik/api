@@ -65,12 +65,12 @@ class mainSearch_v1(Resource):
 			parser = reqparse.RequestParser()
 			parser.add_argument('val', type=str, help='search string')
 			args = parser.parse_args()
-			_val = "*"+args['val'].strip() + "*"
+			_val = args['val'].strip() 
 			query = {
 			    "query": {
 			        "query_string" : {
 			            "fields" : ["name^2","keyword"],
-			            "query" : _val
+			            "query" : "*"+ _val + "*"
 			        }
 			    },
 			        "from":0,
@@ -117,7 +117,7 @@ class mainSearchByLoc_v1(Resource):
 			parser.add_argument('type', type=str, help='location type locality, micromarket')
 			parser.add_argument('key', type=str, help='key of location')
 			args = parser.parse_args()
-			_val = "*"+args['val'].strip() + "*"
+			_val = args['val'].strip()
 			_type = args['type']
 			_key = args['key']
 
@@ -137,7 +137,7 @@ class mainSearchByLoc_v1(Resource):
 			namef = {}
 			namef["query_string"] = {}
 			namef["query_string"]["fields"] =  ["name^2","keyword"]
-			namef["query_string"]["query"] =  _val
+			namef["query_string"]["query"] =  "*"+_val+ "*"
 			query["query"]["bool"]["must"].append(namef)
 
 			data = []
@@ -176,12 +176,12 @@ class projLocSearch_v1(Resource):
 			parser = reqparse.RequestParser()
 			parser.add_argument('val', type=str, help='search string')
 			args = parser.parse_args()
-			_val = "*"+args['val'].strip() + "*"
+			_val = args['val'].strip()
 			query = {
 			    "query": {
 			        "query_string" : {
 			            "fields" : ["name^2","keyword"],
-			            "query" : _val
+			            "query" : "*"+_val+ "*"
 			        }
 			    },
 			        "from":0,
