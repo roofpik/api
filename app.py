@@ -22,6 +22,8 @@ api.add_resource(mainSearchByLoc_v1,'/v1/mainSearchByLoc')
 api.add_resource(sendOtp_v1,'/v1/sendOtp')
 api.add_resource(welcomeSms_v1,'/v1/welcomeSms')
 api.add_resource(writeReviewSms_v1,'/v1/writeReviewSms')
+api.add_resource(couponSms_v1,'/v1/couponSms')
+api.add_resource(businessEnquirySms_v1,'/v1/businessEnquirySms')
 
 api.add_resource(reviewSearch_v1,'/v1/reviewSearch')
 api.add_resource(projectFilter_v1,'/v1/projectFilter')

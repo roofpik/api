@@ -52,7 +52,7 @@ class projectFilter_v1(Resource):
 			if not pagination:
 				pstart = 0
 			else:
-				pstart = (pagination-1)*20
+				pstart = (pagination-1)*10
 
 
 
@@ -62,7 +62,7 @@ class projectFilter_v1(Resource):
 			query["query"]["bool"]["must"] = []
 			query["sort"] = [{"rank.cityrank" : {"order" : "asc", "mode" : "avg"}}]
 			query['from'] = pstart
-			query['size'] = 20
+			query['size'] = 10
 			allBhk = ""
 
 
@@ -414,6 +414,7 @@ class projectFilter_v1(Resource):
 						"style": d["general"]["style"],
 						"segment": d["general"]["segment"],
 						"rank": d["rank"]["cityrank"],
+						"citycount": d["rank"]["citycount"],
 						"reviews": d["review"]["count"],
 						"rating": round(d["review"]["rating"],1),
 						"score": round(d["review"]["score"],1),

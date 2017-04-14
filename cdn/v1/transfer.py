@@ -100,5 +100,24 @@ def imageUpload():
     ftp.quit()
     print err
 
-imageUpload()
+def delUploadedImg():
+    r = requests.request('get','https://roofpik-new.firebaseio.com/images/.json')
+    data = r.json()
+    os.getcwd()
+    size = ['xs','s','m','l','xl']
+    os.chdir('/var/www/api/cdn/v1/images/')
+    for key in data:
+        d = data[key]
+        try:
+            for s in size:
+            os.remove(d['imgName']+s+'.jpg')
+        except Exception as e:
+            print "error: " + key
+
+
+
+
+delUploadedImg()
+
+# imageUpload()
 

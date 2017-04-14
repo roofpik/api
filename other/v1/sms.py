@@ -64,7 +64,7 @@ class writeReviewSms_v1(Resource):
 			return {'status':'400','Message':str(e)}
 
 
-class coupon_v1(Resource):
+class couponSms_v1(Resource):
 	def post(self):
 		try:
 			parser = reqparse.RequestParser()
@@ -79,6 +79,27 @@ class coupon_v1(Resource):
 			'MobileNo' :_mobile,
 			'SenderID':'ROOFPK',
 			'Message':"Your coupon code is " + _coupon +". "+ urlshort.genurl(_coupon),
+			'ServiceName': 'TEMPLATE_BASED'}
+			url = "http://smsapi.24x7sms.com/api_2.0/SendSMS.aspx"
+			f = urllib.urlencode(f)
+			response = requests.post(url, params= f)
+			return {'status':'200'}
+		except Exception as e:
+			return {'status':'400','Message':str(e)}
+
+class businessEnquirySms_v1(Resource):
+	def post(self):
+		try:
+			parser = reqparse.RequestParser()
+			parser.add_argument('mobile', type=str, help='mobile number')
+			parser.add_argument('code', type=str, help='enquiry number')
+			args = parser.parse_args()
+			_mobile = str(args['mobile'])
+			_code = str(args['code'])
+			f = { 'APIKEY' : 'rNfGwBJ7xcV',
+			'MobileNo' :_mobile,
+			'SenderID':'ROOFPK',
+			'Message':"Thank you! We have received your enquiry and our team is working on it. Ref No "+_code,
 			'ServiceName': 'TEMPLATE_BASED'}
 			url = "http://smsapi.24x7sms.com/api_2.0/SendSMS.aspx"
 			f = urllib.urlencode(f)
