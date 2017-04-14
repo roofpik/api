@@ -9,34 +9,31 @@ import cv2
 import numpy as np
 
 class uploadImage_v1(Resource):
-	def post(self):
-		try:
-
+    def post(self):
+        try:
             parser = reqparse.RequestParser()
-			parser.add_argument('img', type=str, help='image src')
-			parser.add_argument('imgName', type=str, help="image name")
+            parser.add_argument('img', type=str, help='image src')
+            parser.add_argument('imgName', type=str, help="image name")
             args = parser.parse_args()
 
-			_img = args['img']
-			_imgName = args['imgName']
-			if not _img:
-				return {'status':'400','Message':'Image is not valid'}
+            _img = args['img']
+            _imgName = args['imgName']
+            if not _img:
+                return {'status':'400','Message':'Image is not valid'}
 
 
-			_fileName = _imgName + '.jpg'
-                        imgstr = _img.split('base64,')[1]
-                        imgdata = base64.b64decode(imgstr)
-                        os.getcwd()
-                        os.chdir('/var/www/api/cdn/v1/images/')
-                        with open(_fileName, 'wb') as f:
-                                f.write(imgdata)
-                                f.close()
+            _fileName = _imgName + '.jpg'
+            imgstr = _img.split('base64,')[1]
+            imgdata = base64.b64decode(imgstr)
+            os.getcwd()
+            os.chdir('/var/www/api/cdn/v1/images/')
+            with open(_fileName, 'wb') as f:
+                f.write(imgdata)
+                f.close()
 
-			return {'status':'200', 'imageName': _imgName}
-                except Exception as e:
-                        return {'status':'400','Message':str(e)}
-
-
+            return {'status':'200', 'imageName': _imgName}
+        except Exception as e:
+            return {'status':'400','Message':str(e)}
 
 
 class deleteImage_v1(Resource):
