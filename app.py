@@ -18,6 +18,7 @@ api.add_resource(test,'/test')
 api.add_resource(searchLocation_v1,'/v1/searchLocation')
 api.add_resource(mainSearch_v1,'/v1/mainSearch')
 api.add_resource(mainSearchByLoc_v1,'/v1/mainSearchByLoc')
+api.add_resource(projLocSearch_v1,'/v1/projLocSearch')
 
 api.add_resource(sendOtp_v1,'/v1/sendOtp')
 api.add_resource(welcomeSms_v1,'/v1/welcomeSms')
