@@ -43,7 +43,7 @@ class emailReview_v1(Resource):
 			_project = args['project']
 			subject = "Roofpik! Thank you for contributing "+_name+"!"
 			to_email = Email(_email)
-			content = Content("text/html", templates.reviewTemplate(_name,_project))
+			content = Content("text/html", templates.reviewTemplate(_name))
 			mail = Mail(from_email, subject, to_email, content)
 			response = sg.client.mail.send.post(request_body=mail.get())
 			return {'status':response.status_code}
