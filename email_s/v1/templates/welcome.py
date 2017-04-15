@@ -48,19 +48,15 @@ def welcomeTemplate(name):
               <tr>
                  <td colspan="2 " style="padding-top: 15px; padding-bottom: 15px; line-height: 21px; color: #333; ">
                     Dear $name, <br><br>
-                    <b>We’re glad to see here!</b>
+                    <b>We’re glad to see you here!</b>
                     <br>
                     <br>               
-                    <i>  We bring reviews”To the people”, “By the people”, “For the People”</i> 
+                    <i>  We bring reviews "To the people", "By the people", "For the People"</i> 
                     <br><br> 
-                    <b>Welcome</b> to the first of kind real estate community, we have thousands of reviews by verified end consumers. With a huge number of reviews and experiences, Roofpik can help you select the your next home. Compare and select from 1000's of properties in 100's of location to find a place that is best for your family or business.   <br><br> 
-                    Our unique property ranking system helps make your choice simpler and easier.  <br>            
-                    You get to choose to find a home with us:<br>
-                    Either with our listed best rated broker partners Or genuine owners
-                    List your property at our platform: Through our listed partners for end to end handling of your requirement
-                    or with complete access to genuine seekers at no substantial cost involved 
+                    <b>Welcome</b> to the first of kind real estate community, we have thousands of reviews by verified residents. With a huge number of reviews and experiences, Roofpik can help you find your next home. Compare and select from 100's of properties to find a place that is best suited for you.   <br><br> 
+                    Our unique property ranking and reviewing system helps make your choice simpler and easier.  <br> <br>            
                     <br><br>
-                    <i>No Classifieds  |  No Broker Ads  |  No Broker Reviews </i>
+                    <i>Genuine Reviews  |  Validated Project Information | Trusted Agents  </i>
                  </td>
               </tr>
               <tr>

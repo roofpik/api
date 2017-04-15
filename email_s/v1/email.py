@@ -9,7 +9,7 @@ from sendgrid.helpers.mail import *
 import templates
 
 sg = sendgrid.SendGridAPIClient(apikey='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')
-from_email = Email("no-reply@roofpik.com")
+from_email = Email("no-reply@roofpik.in")
 
 class emailWelcome_v1(Resource):
 	def post(self):

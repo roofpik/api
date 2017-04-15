@@ -60,7 +60,7 @@ def reviewTemplate(name, project):
             <br> Roofpik is NOT just another property search portal
             <br>
             <br>
-            <p>No Classifieds | No Broker Ads | No Broker Reviews </p>
+             <i>Genuine Reviews  |  Validated Project Information | Trusted Agents  </i>
          </td>
       </tr>
       <tr>
