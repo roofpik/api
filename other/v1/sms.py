@@ -54,7 +54,7 @@ class writeReviewSms_v1(Resource):
 			f = { 'APIKEY' : 'rNfGwBJ7xcV',
 			'MobileNo' :_mobile,
 			'SenderID':'ROOFPK',
-			'Message':"Thank you for contributing Arpit! you are now eligible to avail exciting offers from our partners.",
+			'Message':"Thank you for contributing! you are now eligible to avail exciting offers from our partners.",
 			'ServiceName': 'TEMPLATE_BASED'}
 			url = "http://smsapi.24x7sms.com/api_2.0/SendSMS.aspx"
 			f = urllib.urlencode(f)

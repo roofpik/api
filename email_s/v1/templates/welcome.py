@@ -5,8 +5,6 @@ def welcomeTemplate(name):
 
 	html = """\
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,213 +21,61 @@ def welcomeTemplate(name):
     <!-- The title tag shows in email notifications, like Android 4.4. -->
     <!-- Web Font / @font-face : END -->
     <!-- CSS Reset -->
-    <style>
-    html,
-    body {
-        margin: 0 auto !important;
-        padding: 0 !important;
-        height: 100% !important;
-        width: 100% !important;
-        font-family: Helvetica, Lucida Grande, Arial, sans-serif;
-        font-size: 12px;
-        line-height: 18px;
-        color: #666666;
-        text-align: justify;
-    }
     
-    * {
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-    }
-    
-    div[style*="margin: 16px 0"] {
-        margin: 0 !important;
-    }
-    /* What it does: Stops Outlook from adding extra spacing to tables. */
-    
-    table,
-    td {
-        mso-table-lspace: 0pt !important;
-        mso-table-rspace: 0pt !important;
-    }
-    /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
-    
-    table {
-        border-spacing: 0 !important;
-        border-collapse: collapse !important;
-        table-layout: fixed !important;
-        margin: 0 auto !important;
-    }
-    
-    table table table {
-        table-layout: auto;
-    }
-    /* What it does: Uses a better rendering method when resizing images in IE. */
-    
-    img {
-        -ms-interpolation-mode: bicubic;
-    }
-    /* What it does: A work-around for iOS meddling in triggered links. */
-    
-    *[x-apple-data-detectors] {
-        color: inherit !important;
-        text-decoration: none !important;
-    }
-    /* What it does: A work-around for Gmail meddling in triggered links. */
-    
-    .x-gmail-data-detectors,
-    .x-gmail-data-detectors *,
-    .aBn {
-        border-bottom: 0 !important;
-        cursor: default !important;
-    }
-    /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
-    
-    .a6S {
-        display: none !important;
-        opacity: 0.01 !important;
-    }
-    /* If the above doesn't work, add a .g-img class to any image in question. */
-    
-    img.g-img + div {
-        display: none !important;
-    }
-    /* What it does: Prevents underlining the button text in Windows 10 */
-    
-    .button-link {
-        text-decoration: none !important;
-    }
-    /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-    /* Create one of these media queries for each additional viewport size you'd like to fix */
-    /* Thanks to Eric Lepetit @ericlepetitsf) for help troubleshooting */
-    
-    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
-        /* iPhone 6 and 6+ */
-        .email-container {
-            min-width: 375px !important;
-        }
-    }
-    </style>
-    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
-    <!--[if gte mso 9]>
-    <xml>
-        <o:OfficeDocumentSettings>
-            <o:AllowPNG/>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-    </xml>
-    <![endif]-->
-    <!-- Progressive Enhancements -->
-    <style>
-    /* What it does: Hover styles for buttons */
-    
-    .button-td,
-    .button-a {
-        transition: all 100ms ease-in;
-    }
-    
-    .button-td:hover,
-    .button-a:hover {
-        background: #555555 !important;
-        border-color: #555555 !important;
-    }
-    /* Media Queries */
-    
-    @media screen and (max-width: 600px) {
-        .email-container {
-            width: 100% !important;
-            margin: auto !important;
-        }
-        /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
-        .fluid {
-            max-width: 100% !important;
-            height: auto !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-        /* What it does: Forces table cells into full-width rows. */
-        .stack-column,
-        .stack-column-center {
-            display: block !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            direction: ltr !important;
-        }
-        /* And center justify these ones. */
-        .stack-column-center {
-            text-align: center !important;
-        }
-        /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
-        .center-on-narrow {
-            text-align: center !important;
-            display: block !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-            float: none !important;
-        }
-        table.center-on-narrow {
-            display: inline-block !important;
-        }
-    }
-    </style>
 </head>
 
-<body width="100%" bgcolor="#222222" style="margin: 0; mso-line-height-rule: exactly;">
-    <center style="width: 100%; background: #222222; text-align: left;">
-        <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
-            (Optional) This text will appear in the inbox preview, but not the email body.
+<body width="100%" style="margin: 0; mso-line-height-rule: exactly;">
+
+
+        <div>
+           <style>
+              body {
+              margin: 0;
+              background-color: #fafafa;
+              }
+              h4,
+              p,
+              h5,
+              h3 {
+              margin: 5px;
+              }
+           </style>
+           <table style="font-size: 12px;  width: 100%; background-color: #fff; max-width: 650px; padding: 0 15px;        font-family: arial; border: 1px solid #eee; margin: 0 auto;">
+              <tr>
+                 <td colspan="2" style=" border-bottom: 1px dashed #ddd; padding-top: 15px; padding-bottom: 15px; line-height: 21px; color: #333;" "><img src="http://cdn.roofpik.com/emailer/cover.png" width="100% " /></td>
+              </tr>
+              <tr>
+                 <td colspan="2 " style="padding-top: 15px; padding-bottom: 15px; line-height: 21px; color: #333; ">
+                    Dear $name, <br><br>
+                    <b>We’re glad to see here!</b>
+                    <br>
+                    <br>               
+                    <i>  We bring reviews”To the people”, “By the people”, “For the People”</i> 
+                    <br><br> 
+                    <b>Welcome</b> to the first of kind real estate community, we have thousands of reviews by verified end consumers. With a huge number of reviews and experiences, Roofpik can help you select the your next home. Compare and select from 1000's of properties in 100's of location to find a place that is best for your family or business.   <br><br> 
+                    Our unique property ranking system helps make your choice simpler and easier.  <br>            
+                    You get to choose to find a home with us:<br>
+                    Either with our listed best rated broker partners Or genuine owners
+                    List your property at our platform: Through our listed partners for end to end handling of your requirement
+                    or with complete access to genuine seekers at no substantial cost involved 
+                    <br><br>
+                    <i>No Classifieds  |  No Broker Ads  |  No Broker Reviews </i>
+                 </td>
+              </tr>
+              <tr>
+                 <td colspan="2 " style="padding-top: 15px; padding-bottom: 15px; line-height: 21px; color: #333; ">
+                    Best Regards,<br>
+                    Kanika S Katoch  (Co-Founder, Roofpik)<br><br>
+                    Roofpik | 250,Second Floor, Vipul Trade Centre, Sohna Road, Sector-48, Gurgaon, 122018 | 
+                 </td>
+              </tr>
+           </table>
         </div>
-        <!-- Visually Hidden Preheader Text : END -->
-        <!-- Email Header : BEGIN -->
-        <!-- Email Header : END -->
-        <!-- Email Body : BEGIN -->
-        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
-            <!-- 1 Column Text + Button : BEGIN -->
-            <tr>
-                <td bgcolor="#ffffff" style="padding: 40px; text-align: left; line-height: 20px; color: #555555;">
-                   Dear $name, 
-                    <br><br>
-                     You now have access to iTunes Connect, our exclusive, partner-facing website. You may access iTunes Connect using the link below: 
-                    <br><br>
-                     iTunes Connect Log in using the existing username and password for your Apple Developer account. With iTunes Connect, you can enter into a Paid Applications agreement, setup and edit information about your application, view sales and trend information, retrieve financial reports (if applicable), and create new user accounts for other people at your company. If you have any questions regarding your iTunes Connect account please Contact Us. Best Regards, The App Store Team
-                    <br>
-                    <br>
-                    <!-- Button : BEGIN -->
-                  
-                    <!-- Button : END -->
-                </td>
-            </tr>
-            <!-- 1 Column Text + Button : END -->
-            <!-- Background Image with Text : BEGIN -->
-         
-          
-            <!-- 1 Column Text : END -->
-        </table>
-        <!-- Email Body : END -->
-        <!-- Email Footer : BEGIN -->
-        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
-            <tr>
-                <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;" class="x-gmail-data-detectors">
-                    <webversion style="color:#cccccc; text-decoration:underline; font-weight: bold;">View as a Web Page</webversion>
-                    <br>
-                    <br> Company Name
-                    <br>123 Fake Street, SpringField, OR, 97477 US
-                    <br>(123) 456-7890
-                    <br>
-                    <br>
-                    <unsubscribe style="color:#888888; text-decoration:underline;">unsubscribe</unsubscribe>
-                </td>
-            </tr>
-        </table>
-        <!-- Email Footer : END -->
-    </center>
+
+
 </body>
 
 </html>
-
-
-
 
 
 
