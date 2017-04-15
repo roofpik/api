@@ -49,12 +49,14 @@ class writeReviewSms_v1(Resource):
 		try:
 			parser = reqparse.RequestParser()
 			parser.add_argument('mobile', type=str, help='mobile number')
+			parser.add_argument('name', type=str, help='user name')
 			args = parser.parse_args()
 			_mobile = str(args['mobile'])
+			_name = args['name']
 			f = { 'APIKEY' : 'rNfGwBJ7xcV',
 			'MobileNo' :_mobile,
 			'SenderID':'ROOFPK',
-			'Message':"Thank you for contributing! you are now eligible to avail exciting offers from our partners.",
+			'Message':"Thank you for contributing "+_name+"! you are now eligible to avail exciting offers from our partners.",
 			'ServiceName': 'TEMPLATE_BASED'}
 			url = "http://smsapi.24x7sms.com/api_2.0/SendSMS.aspx"
 			f = urllib.urlencode(f)
