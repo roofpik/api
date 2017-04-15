@@ -27,8 +27,6 @@ class projKeyRatings_v1(Resource):
                         query['query']['match']['project.key'] = pkey
                         query['from'] = 0
                         query['size'] = 400
-
-
                         items = []
                         esserver = 'https://search-roof-pnslfpvdk2valk5lfzveecww54.ap-south-1.es.amazonaws.com'
                         r = requests.get(esserver + '/allreviewsin/data/_search?', data=json.dumps(query))

@@ -7,9 +7,7 @@ import json
 class projectDetails_v1(Resource):
 	def get(self):
 		try:
-
 			parser = reqparse.RequestParser()
-
 			parser.add_argument('key', type=str, help='project key')
 			args = parser.parse_args()
 			_key = args['key']
