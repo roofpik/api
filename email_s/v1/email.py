@@ -56,15 +56,13 @@ class emailCoupon_v1(Resource):
 		try:
 			parser = reqparse.RequestParser()
 			parser.add_argument('email', type=str, help='to email address')
-			parser.add_argument('project', type=str, help='name of project')
 			parser.add_argument('name', type=str, help='user name')
 			args = parser.parse_args()
 			_email = args['email']
 			_name = args['name']
-			_project = args['project']
 			subject = "Roofpik! Thank you for contributing "+_name+"!"
 			to_email = Email(_email)
-			content = Content("text/html", templates.reviewTemplate(_name,_project))
+			content = Content("text/html", templates.reviewTemplate(_name))
 			mail = Mail(from_email, subject, to_email, content)
 			response = sg.client.mail.send.post(request_body=mail.get())
 			return {'status':response.status_code}

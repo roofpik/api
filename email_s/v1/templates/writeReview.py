@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from string import Template
 
-def reviewTemplate(name, project):
+def reviewTemplate(name):
 
 
 	html = """\
@@ -43,7 +43,7 @@ def reviewTemplate(name, project):
    </style>
    <table style="font-size: 12px;  width: 100%; background-color: #fff; max-width: 650px; padding: 0 15px;        font-family: arial; border: 1px solid #eee; margin: 0 auto;">
       <tr>
-         <td colspan="2" style=" border-bottom: 1px dashed #ddd; padding-top: 15px; padding-bottom: 15px; line-height: 21px; color: #333;""><img src="ROOFPIK-COVER-PHOTO.png" width="100%" /></td>
+         <td colspan="2" style=" border-bottom: 1px dashed #ddd; padding-top: 15px; padding-bottom: 15px; line-height: 21px; color: #333;""><img src="http://cdn.roofpik.com/emailer/cover.png" width="100%" /></td>
       </tr>
       <tr>
          <td colspan="2" style="padding-top: 15px; padding-bottom: 15px; line-height: 21px; color: #333;">
@@ -83,4 +83,4 @@ def reviewTemplate(name, project):
 
 """
 
-	return Template(html).safe_substitute(name=name, project=project)
+	return Template(html).safe_substitute(name=name)

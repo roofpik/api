@@ -55,7 +55,7 @@ def welcomeTemplate(name):
                     <br><br> 
                     <b>Welcome</b> to the first of kind real estate community, we have thousands of reviews by verified residents. With a huge number of reviews and experiences, Roofpik can help you find your next home. Compare and select from 100's of properties to find a place that is best suited for you.   <br><br> 
                     Our unique property ranking and reviewing system helps make your choice simpler and easier.  <br> <br>            
-                    <br><br>
+                    
                     <i>Genuine Reviews  |  Validated Project Information | Trusted Agents  </i>
                  </td>
               </tr>
